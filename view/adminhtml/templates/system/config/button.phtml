@@ -1,0 +1,16 @@
+<?php
+/**
+ * @var \LegalWeb\Cloud\Block\Adminhtml\System\Config\Button $block
+ */
+$target = $block->getTarget();
+?>
+<div class="actions">
+    <a
+        class="action-default"
+        href="<?= $block->escapeHtmlAttr($block->getButtonUrl()) ?>"
+        <?php if($target): ?>target="<?= $block->escapeHtmlAttr($target) ?>"<?php endif; ?>
+    >
+        <span><?= $block->escapeHtml(__($block->getButtonLabel())) ?></span>
+    </a>
+</div>
+

@@ -1,0 +1,19 @@
+.config-nav-block.legal-web-extensions {
+    .title {
+        display: flex;
+        align-items: center;
+
+        &:before {
+            display: block;
+            content: '';
+            width: 2rem;
+            height: 2rem;
+            margin-right: .75rem;
+
+            .lib-url('images/legalweb.svg', 'LegalWeb_Cloud');
+            background: url("@{url}");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+}

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<widgets
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd"
+>
+    <widget id="legalweb_cloud_configuration_content" class="LegalWeb\Cloud\Block\ConfigurationContent">
+        <label>Legal web - Content</label>
+        <description>Content retrieved from legal web configuration.</description>
+        <parameters>
+            <parameter name="configuration_path" xsi:type="select" required="true" visible="true">
+                <label>Content</label>
+                <options>
+                    <option name="contractcheckout" value="services/contractcheckout">
+                        <label>Checkout</label>
+                    </option>
+                    <option name="contractwithdrawal" value="services/contractwithdrawal">
+                        <label>Withdrawal</label>
+                    </option>
+                    <option name="contractwithdrawaldigital" value="services/contractwithdrawaldigital">
+                        <label>Withdrawal (Digital)</label>
+                    </option>
+                    <option name="contractwithdrawalservice" value="services/contractwithdrawalservice">
+                        <label>Withdrawal (Service)</label>
+                    </option>
+                    <option name="dpstatement" value="services/dpstatement">
+                        <label>Data Privacy</label>
+                    </option>
+                    <option name="imprint" value="services/imprint" selected="true">
+                        <label>Imprint</label>
+                    </option>
+                    <option name="contractterms" value="services/contractterms">
+                        <label>Terms</label>
+                    </option>
+                </options>
+            </parameter>
+        </parameters>
+    </widget>
+</widgets>
+

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<config
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd"
+>
+    <preference for="LegalWeb\Cloud\Api\SignedConfigLoaderInterface" type="LegalWeb\Cloud\Model\SignedConfigLoader"/>
+
+    <type name="Magento\Framework\Console\CommandListInterface">
+        <arguments>
+            <argument name="commands" xsi:type="array">
+                <item name="legalweb_cloud_refresh" xsi:type="object">LegalWeb\Cloud\Console\Command\RefreshCommand</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

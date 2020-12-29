@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+    <router id="admin">
+        <route id="legalweb_cloud" frontName="legalweb_cloud">
+            <module name="LegalWeb_Cloud" before="Magento_Backend"/>
+        </route>
+    </router>
+</config>

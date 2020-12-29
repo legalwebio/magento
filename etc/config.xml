@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+
+<config
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd"
+>
+    <default>
+        <legalweb_cloud>
+            <auto_update>
+                <status>1</status>
+            </auto_update>
+            <seal>
+                <show_in_footer>1</show_in_footer>
+            </seal>
+        </legalweb_cloud>
+        <crontab>
+            <default>
+                <jobs>
+                    <legalweb_cloud_config_refresh>
+                        <schedule>
+                            <cron_expr>15 2 * * *</cron_expr>
+                        </schedule>
+                    </legalweb_cloud_config_refresh>
+                </jobs>
+            </default>
+        </crontab>
+    </default>
+</config>

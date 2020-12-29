@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<config
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd"
+>
+    <type name="Magento\Framework\View\Page\Config\RendererInterface">
+        <plugin name="legalweb_cloud_prepend_config"
+                type="LegalWeb\Cloud\Plugin\PrependConfig" sortOrder="10"/>
+    </type>
+    <type name="Magento\Cms\Block\Page">
+        <plugin name="legalweb_cloud_append_widgets"
+                type="LegalWeb\Cloud\Plugin\AppendConfigurationContents" sortOrder="10"/>
+    </type>
+</config>

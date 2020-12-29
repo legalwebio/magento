@@ -1,0 +1,249 @@
+<?xml version="1.0"?>
+<config
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd"
+>
+    <system>
+        <tab id="legalweb" translate="label" sortOrder="1" class="legal-web-extensions">
+            <label>legal web</label>
+        </tab>
+
+        <section
+            id="legalweb_cloud"
+            translate="label"
+            type="text"
+            sortOrder="170"
+            showInDefault="1"
+            showInWebsite="1"
+            showInStore="1"
+        >
+            <label>Cloud</label>
+            <tab>legalweb</tab>
+            <resource>LegalWeb_Cloud::config</resource>
+
+            <group
+                id="information"
+                translate="label"
+                sortOrder="10"
+                showInDefault="1"
+                showInWebsite="1"
+                showInStore="1"
+            >
+                <label>Information</label>
+                <attribute type="expanded">1</attribute>
+                <field id="domain" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Domain</label>
+                    <frontend_model>LegalWeb\Cloud\Block\Adminhtml\System\Config\DomainUrl</frontend_model>
+                </field>
+                <field id="domain_id" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Domain ID</label>
+                    <frontend_model>LegalWeb\Cloud\Block\Adminhtml\System\Config\DomainId</frontend_model>
+                </field>
+                <field id="refresh" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label></label>
+                    <button_label>Reload configuration</button_label>
+                    <button_url>legalweb_cloud/refresh</button_url>
+                    <frontend_model>LegalWeb\Cloud\Block\Adminhtml\System\Config\Button</frontend_model>
+                </field>
+            </group>
+
+            <group
+                id="general"
+                translate="label"
+                sortOrder="20"
+                showInDefault="1"
+                showInWebsite="1"
+                showInStore="1"
+            >
+                <label>General Configuration</label>
+                <field
+                    id="guid"
+                    translate="label"
+                    type="text"
+                    sortOrder="10"
+                    showInDefault="1"
+                    showInWebsite="1"
+                    showInStore="1"
+                >
+                    <label>Guid</label>
+                    <backend_model>LegalWeb\Cloud\Model\Config\Backend\Guid</backend_model>
+                </field>
+                <field id="license" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label></label>
+                    <button_label>Obtain your license</button_label>
+                    <button_url>https://legalweb.io/?aff=4538</button_url>
+                    <frontend_model>LegalWeb\Cloud\Block\Adminhtml\System\Config\Button</frontend_model>
+                </field>
+            </group>
+
+            <group
+                id="auto_update"
+                translate="label"
+                sortOrder="30"
+                showInDefault="1"
+                showInWebsite="1"
+                showInStore="1"
+            >
+                <label>Auto Update</label>
+
+                <field
+                    id="status"
+                    translate="label"
+                    type="select"
+                    sortOrder="10"
+                    showInDefault="1"
+                    showInWebsite="1"
+                    showInStore="1"
+                >
+                    <label>Status</label>
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                </field>
+
+                <field
+                    id="email"
+                    translate="label,comment"
+                    type="text"
+                    sortOrder="20"
+                    showInDefault="1"
+                    showInWebsite="1"
+                    showInStore="1"
+                >
+                    <label>Email Address</label>
+                    <comment>Once an update is available, an email notification will be sent to the given recipient.
+                    </comment>
+                    <depends>
+                        <field id="status">0</field>
+                    </depends>
+                </field>
+            </group>
+            <group
+                id="pages"
+                translate="label"
+                sortOrder="40"
+                showInDefault="1"
+                showInWebsite="1"
+                showInStore="1"
+            >
+                <label>Pages</label>
+                <comment>Add content from your legal web configuration to cms pages.</comment>
+
+                <field
+                    id="imprint_id"
+                    translate="label"
+                    type="select"
+                    sortOrder="10"
+                    showInDefault="1"
+                    showInWebsite="1"
+                    showInStore="1"
+                >
+                    <label>Imprint</label>
+                    <source_model>LegalWeb\Cloud\Model\Config\Source\Page</source_model>
+                </field>
+
+                <field
+                    id="data_privacy_id"
+                    translate="label"
+                    type="select"
+                    sortOrder="20"
+                    showInDefault="1"
+                    showInWebsite="1"
+                    showInStore="1"
+                >
+                    <label>Data Privacy</label>
+                    <source_model>LegalWeb\Cloud\Model\Config\Source\Page</source_model>
+                </field>
+
+                <field
+                    id="contract_checkout_id"
+                    translate="label"
+                    type="select"
+                    sortOrder="20"
+                    showInDefault="1"
+                    showInWebsite="1"
+                    showInStore="1"
+                >
+                    <label>Checkout</label>
+                    <source_model>LegalWeb\Cloud\Model\Config\Source\Page</source_model>
+                </field>
+
+                <field
+                    id="contract_withdrawal_id"
+                    translate="label"
+                    type="select"
+                    sortOrder="20"
+                    showInDefault="1"
+                    showInWebsite="1"
+                    showInStore="1"
+                >
+                    <label>Withdrawal</label>
+                    <source_model>LegalWeb\Cloud\Model\Config\Source\Page</source_model>
+                </field>
+
+                <field
+                    id="contract_withdrawal_digital_id"
+                    translate="label"
+                    type="select"
+                    sortOrder="20"
+                    showInDefault="1"
+                    showInWebsite="1"
+                    showInStore="1"
+                >
+                    <label>Withdrawal (Digital)</label>
+                    <source_model>LegalWeb\Cloud\Model\Config\Source\Page</source_model>
+                </field>
+
+                <field
+                    id="contract_withdrawal_service_id"
+                    translate="label"
+                    type="select"
+                    sortOrder="20"
+                    showInDefault="1"
+                    showInWebsite="1"
+                    showInStore="1"
+                >
+                    <label>Withdrawal (Service)</label>
+                    <source_model>LegalWeb\Cloud\Model\Config\Source\Page</source_model>
+                </field>
+
+                <field
+                    id="contract_terms_id"
+                    translate="label"
+                    type="select"
+                    sortOrder="20"
+                    showInDefault="1"
+                    showInWebsite="1"
+                    showInStore="1"
+                >
+                    <label>Terms</label>
+                    <source_model>LegalWeb\Cloud\Model\Config\Source\Page</source_model>
+                </field>
+
+            </group>
+            <group
+                id="seal"
+                translate="label"
+                sortOrder="50"
+                showInDefault="1"
+                showInWebsite="1"
+                showInStore="1"
+            >
+                <label>Seal</label>
+                <field
+                    id="show_in_footer"
+                    translate="label"
+                    type="select"
+                    sortOrder="10"
+                    showInDefault="1"
+                    showInWebsite="1"
+                    showInStore="1"
+                >
+                    <label>Show in Footer</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+
+            </group>
+
+
+        </section>
+    </system>
+</config>

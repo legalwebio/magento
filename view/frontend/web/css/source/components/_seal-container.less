@@ -1,0 +1,13 @@
+& when (@media-common = true) {
+    #legalweb-seal-container {
+        text-align: center;
+        margin-bottom: @seal-container__margin-bottom;
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    #legalweb-seal-container {
+        display: inline-block;
+        margin-right: @seal-container__margin-right;
+    }
+}

@@ -1,0 +1,15 @@
+<?php
+/**
+ * @var \LegalWeb\Cloud\Block\Config $block
+ */
+$generalConfig = $block->getSerializedGeneralConfig();
+$integrationConfig = $block->getSerializedIntegrationConfig();
+$js            = $block->getPopupJs();
+$css           = $block->getPopupCss();
+?>
+<script>
+    var spDsgvoGeneralConfig = <?= $generalConfig ?>;
+    var spDsgvoIntegrationConfig = <?= $integrationConfig ?>;
+</script>
+<script><?= $js ?></script>
+<style><?= $css ?></style>

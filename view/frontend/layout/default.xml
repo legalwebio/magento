@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+
+<page
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd"
+>
+    <body>
+        <referenceContainer name="before.body.end">
+            <block
+                class="LegalWeb\Cloud\Block\ConfigurationContent"
+                name="legalweb.popup"
+            >
+                <arguments>
+                    <argument name="configuration_path" xsi:type="string">services/dppopup</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+        <referenceContainer name="footer">
+            <block
+                class="LegalWeb\Cloud\Block\ConfigurationContent"
+                name="legalweb.seal"
+                before="-"
+                ifconfig="legalweb_cloud/seal/show_in_footer"
+            >
+                <arguments>
+                    <argument name="configuration_path" xsi:type="string">services/guetesiegel</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>
