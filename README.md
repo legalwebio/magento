@@ -1,5 +1,5 @@
 ## Getting started
-1. Run `composer require legalwebio/magento`
+1. To install with composer run `composer require legalwebio/magento`
 2. [Obtain your license](https://legalweb.io/?aff=4538)
 3. Save your GUID inside the Legal web configuration section\
    <img width="100%" height="auto" src="./docs/images/config.png" />
