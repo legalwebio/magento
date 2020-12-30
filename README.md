@@ -1,3 +1,7 @@
+## Introduction
+
+Legal web offers you an easy plug 'n play solution for legal compliance.
+
 ## Getting started
 1. To install with composer run `composer require legalwebio/magento`
 2. [Obtain your license](https://legalweb.io/?aff=4538)
