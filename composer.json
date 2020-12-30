@@ -1,5 +1,5 @@
 {
-  "name": "legalweb/magento",
+  "name": "legalwebio/magento",
   "version": "1.0.0",
   "description": "Legal web cloud integration",
   "type": "magento2-module",
