@@ -98,5 +98,10 @@ class Request
         if ($code && $message) {
             throw new ResponseException(__($message));
         }
+
+        if (!$code && $message) {
+            throw new ResponseException(__('Server Error'));
+        }
+
     }
 }
