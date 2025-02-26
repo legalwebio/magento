@@ -41,12 +41,12 @@ class Config extends Template implements IdentityInterface
         return $this->configProvider->getConfig();
     }
 
-    public function getPopupJs(): string
+    public function getPopupJs(): string | null
     {
         return $this->getConfig()->getConfigData()->getData('services/dppopupjs');
     }
 
-    public function getPopupCss(): string
+    public function getPopupCss(): string | null
     {
         return $this->getConfig()->getConfigData()->getData('services/dppopupcss');
     }
