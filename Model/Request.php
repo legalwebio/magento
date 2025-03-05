@@ -92,10 +92,9 @@ class Request
             throw new ResponseException(__('Unable to unserialize response.'), $e);
         }
 
-        $code    = $data['code'] ?? null;
         $message = $data['message'] ?? null;
 
-        if ($code && $message) {
+        if ($message) {
             throw new ResponseException(__($message));
         }
     }
